@@ -1,0 +1,29 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>Modal</ion-title>
+        <ion-buttons slot="end">
+            <ion-button (click)="close()">
+                <ion-icon slot="start" name="close"></ion-icon>
+            </ion-button>
+        </ion-buttons>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label position="stacked">工作項目</ion-label>
+            <ion-input type="text" [(ngModel)]="item.name"></ion-input>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">到期日</ion-label>
+            <ion-datetime display-format="MM/DD/YYYY" [(ngModel)]="item.due"></ion-datetime>
+        </ion-item>
+        <ion-item>
+            <ion-label position="stacked">附註</ion-label>
+            <ion-textarea [(ngModel)]="item.notes"></ion-textarea>
+        </ion-item>
+    </ion-list>
+    <ion-button (click)="save()">Save</ion-button>
+    <ion-button (click)="close()">Cancel</ion-button>
+</ion-content>

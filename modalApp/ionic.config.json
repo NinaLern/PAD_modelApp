@@ -1,0 +1,7 @@
+{
+  "name": "modalApp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
